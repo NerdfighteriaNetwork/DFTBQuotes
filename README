@@ -1,30 +1,30 @@
 I	Introduction
 
 DFTBQuotes is an IRC Quote Software devolped originally for Nerdfighteria IRC. 
----------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
 II	Installation
 
 a. Unzip/untar & Upload these files to your webserver.
 b. Run install.php and follow directons there.
----------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
 III	FAQ
 
 No Questions have been submitted YET! dun dun dun
----------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
 IV	Support
 
 Note: DFTBQuotes comes WITHOUT ANY WARRANTY. 
 
 Feel free to ask questions by joining the project's IRC Channel: #dftbquotes on 
 irc.nerdfighteria.net
----------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
 V	Credits
 
-~Dimitri Molenaars (Developer/Designer)
-~Elad Alfassa (Developer/Designer)
-~Ahren Bader-Jarvis (Developer)
-~Jason Spriggs (Developer/Designer/Documenter)
----------------------------------------------------------------------------------------
+~Dimitri Molenaars 	[Tyrope] 	(Developer/Designer)
+~Elad Alfassa 		[elad] 		(Developer/Designer)
+~Ahren Bader-Jarvis	[Ahren] 	(Developer)
+~Jason Spriggs 		[Jason] 	(Developer/Designer/Documenter)
+-------------------------------------------------------------------------------------
 VI	Licencing
 
 DFTBQuotes comes WITHOUT ANY WARRANTY. 
