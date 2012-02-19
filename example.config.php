@@ -14,5 +14,6 @@ $conf['sql_user'] = ""; //MySQL username
 $conf['sql_pass'] = ""; //MySQL password
 $conf['sql_db'] = "dftbquotes"; //MySQL database
 $conf['sql_tbl_prefix'] = "dftbq_"; //Prefixes to add to the table names.
-
+$conf['template'] = "default"; //Active theme/template
 ?>
+
