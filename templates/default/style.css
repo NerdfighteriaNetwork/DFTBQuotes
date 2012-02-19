@@ -1,0 +1,60 @@
+/*
+    "Default" - DFTBQuotes template
+    Copyright 2012, Dimitri Molenaars (tyrope.nl)
+    Licenced under the GNU General Public License
+
+    More info:
+    https://github.com/elad661/DFTBQuotes
+*/
+
+/* Elements */
+
+div {
+    margin: 10px;
+    padding: 10px;
+}
+
+a, a:visited {
+    /* links */
+}
+a:active, a:hover {
+    /*active links*/
+}
+
+
+/* Classes */
+
+.wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.column {
+    padding-bottom: 32767px;
+    margin-bottom: -32767px;
+}
+
+
+
+/* IDs */
+
+#columnWrapper {
+    overflow:hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    width: 920px;
+    text-align: center;
+}
+
+#nav {
+    float:left;
+    width:152px;
+}
+
+#content {
+    float:right;
+    width: 728px;
+}
