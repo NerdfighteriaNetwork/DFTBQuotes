@@ -30,12 +30,23 @@
 		    </ul>
 		</div>
 		<div class="column" id="content">
-		    <!-- content -->
 		    <h2>{page}</h2>
-		    <h3>Lorem Ipsum</h3>
-		    <p>dolor sit amet, consectetur adipiscing elit. Curabitur convallis luctus enim, ut pellentesque felis cursus quis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque libero nulla, mattis sit amet eleifend a, dictum ac justo. Fusce sed nulla at metus fringilla venenatis. Maecenas ut eros justo. Ut venenatis, felis eu egestas accumsan, tellus eros pellentesque mauris, at convallis erat turpis ac augue. Fusce ut erat sapien, ac elementum purus. Nullam congue diam sodales nulla gravida mollis. In eu faucibus tortor. Sed eu nibh purus, eget pharetra ipsum. Praesent ac diam orci, pellentesque ullamcorper arcu.</p>
-		    <h3>Maecenas placerat</h3>
-		    <p>turpis non metus volutpat sollicitudin. Nullam pellentesque blandit ultrices. Maecenas vitae augue orci. In eleifend velit in ante aliquam et dictum augue bibendum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas vel eros lacus, sit amet rutrum tellus. In ipsum libero, mattis a dictum quis, mollis ut nunc. Curabitur sapien nibh, varius in bibendum id, ultrices commodo augue. Nunc congue condimentum lorem sit amet tincidunt. Mauris erat magna, vulputate ac congue eget, dapibus vel leo. Pellentesque nec neque in mi fermentum tempus non vel lacus. Quisque velit purus, fringilla in dapibus eu, varius ut urna. Vestibulum vel ante nisl, quis fermentum diam. Duis porttitor sagittis sapien, id feugiat dolor tincidunt vitae. Mauris eget fringilla urna.</p>
+		    <!-- START BLOCK : QUOTE -->
+		    <h3>{title}</h3>
+		    <form action="vote.php" method="post">
+			<input type="hidden" name="quote_id" value="{quoteID}" />
+			<fieldset>
+			    <legend class="quoteTitle">
+				{quoteTitle}
+				<input type="image" src="img/upVote.png" name="type" alt="(+)" />
+				<input type="image" src="img/downVote.png" name="type" alt="(-)" />
+			    </legend>
+			    <p class="quote">
+				{quoteContent}
+			    </p>
+			</fieldset>
+		    </form>
+		    <!-- END BLOCK : QUOTE -->
 		</div>
 	    </div>
 	</div>

@@ -52,6 +52,14 @@ h3 {
     padding-bottom: 32767px;
 }
 
+.quote {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.quoteTitle { 
+    font-family: 'MS Sans Serif', Geneva, sans-serif;
+}
+
 .wrapper {
     background-color: #300571;
     margin: 0 auto;
