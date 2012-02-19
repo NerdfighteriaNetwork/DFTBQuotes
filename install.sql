@@ -11,7 +11,7 @@ USE `dftbquotes` ;
 CREATE  TABLE IF NOT EXISTS `dftbquotes`.`dftbq_quotes` (
   `quoteID` INT NOT NULL AUTO_INCREMENT ,
   `content` TEXT NOT NULL ,
-  `created` DATETIME NOT NULL DEFAULT NOW() ,
+  `created` DATETIME NOT NULL ,
   PRIMARY KEY (`quoteID`) )
 ENGINE = InnoDB;
 
