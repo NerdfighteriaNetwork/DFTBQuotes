@@ -53,11 +53,6 @@ h2, h3 {
     font-family: 'Times New Roman', Times, serif;
 }
 
-h3 {
-    text-indent: 0.5em;
-}
-
-
 
 /* Classes */
 
@@ -71,6 +66,7 @@ h3 {
 }
 
 .quoteFooter {
+    border-top: 1px dashed white;
     font-family: 'MS Sans Serif', Geneva, sans-serif;
     font-size: 80%;
 }

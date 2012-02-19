@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--
     "TyTheme" - DFTBQuotes template
     Copyright (C) 2012, Dimitri Molenaars (tyrope.nl) <tyrope@tyrope.nl>
@@ -30,28 +30,40 @@
     <body>
 	<div class="wrapper">
 	    <div id="header">
-		<!-- header -->
 		<h1>DFTBQuotes - An awesome Quote database</h1>
 	    </div>
 	    <div id="columnWrapper">
 		<div class="column" id="nav">
-		    <!-- navigation -->
+		    <!-- START BLOCK : navigation -->
 		    <ul id='menu'>
-			<li><a href="?pageid=1">Home</a></li>
-			<li>Menu 2</li>
-			<li>Menu 3</li>
-			<li>Menu 4</li>
+			<li><a href="?pid=1">List Quotes</a></li>
+			<li><a href="?pid=2">Search Quotes</a></li>
+			<li><a href="?pid=3">Add Quote</a></li>
+			<!-- START BLOCK : admin_login -->
+			<li><a href="?pid=4">Admin Login</a></li>
+			<!-- END BLOCK : admin_login -->
 		    </ul>
+		    <!-- START BLOCK : admin_menu -->
+		    <ul id='menu'>
+			<li><a href="?pid=5">Approve Quotes</a></li>
+			<li><a href="?pid=6">Export Database</a></li>
+		    </ul>
+		    <ul id='menu'>
+			<li><a href="?pid=7">Add Admin</a></li>
+			<li><a href="?pid=8">Edit Admin</a></li>
+			<li><a href="?pid=9">Remove Admin</a></li>
+		    </ul>
+		    <!-- END BLOCK : admin_menu -->
+		    <!-- END BLOCK: navigation -->
 		</div>
 		<div class="column" id="content">
 		    <h2>{page}</h2>
 		    <!-- START BLOCK : QUOTE -->
-		    <h3>{title}</h3>
 		    <form action="vote.php" method="post">
 			<input type="hidden" name="quote_id" value="{quoteID}" />
 			<fieldset>
 			    <legend class="quoteTitle">
-				{quoteTitle}
+				<h3>{quoteTitle}</h3>
 			    </legend>
 			    <p class="quote">
 				{quoteContent}
