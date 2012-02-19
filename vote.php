@@ -9,7 +9,7 @@ Copyright (C) 2012 Ahren Bader-Jarvis <djahren@djahren.com>
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Foobar is distributed in the hope that it will be useful,
+    DFTBQuotes is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
@@ -25,13 +25,7 @@ More info: https://github.com/elad661/DFTBQuotes
 
 require("config.php");
 //connect to db
-$link = mysql_connect($conf['sql_server'], $conf['sql_user'], $conf['sql_pass']);
-if (!$link) {
-    die('Could not connect: ' . mysql_error()); }
-if (!mysql_select_db($conf['sql_db'], $link)) {
-    echo 'Could not select database';
-    exit;
-}
+require_once("inc/connect.php");
 
 //header here
 
