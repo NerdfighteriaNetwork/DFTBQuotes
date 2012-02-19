@@ -48,7 +48,7 @@ h1 {
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 }
 
-h2, h3 {
+h2 {
     color: #9C02A7;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -59,6 +59,11 @@ h2, h3 {
 .column {
     margin-bottom: -32767px;
     padding-bottom: 32767px;
+}
+
+.menu {
+    list-style: none;
+    padding-left: 0;
 }
 
 .quote {
@@ -72,7 +77,10 @@ h2, h3 {
 }
 
 .quoteTitle { 
+    color: #9C02A7;
     font-family: 'MS Sans Serif', Geneva, sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
 }
 
 .wrapper {
@@ -100,11 +108,6 @@ h2, h3 {
     background-color: #4F10AD;
     text-align: center;
     width: 920px;
-}
-
-#menu {
-    list-style: none;
-    padding-left: 0;
 }
 
 #nav {
