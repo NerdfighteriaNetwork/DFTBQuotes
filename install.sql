@@ -2,8 +2,13 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL';
 
+CREATE USER 'dftbquotes'@'localhost' IDENTIFIED BY 'changepass';
+GRANT USAGE ON * . * TO 'dftbquotes'@'localhost' IDENTIFIED BY 'changepass' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0 ;
+
 CREATE SCHEMA IF NOT EXISTS `dftbquotes` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
 USE `dftbquotes` ;
+
+GRANT ALL PRIVILEGES ON `dftbquotes` . * TO 'dftbquotes'@'localhost';
 
 -- -----------------------------------------------------
 -- Table `dftbquotes`.`dftbq_quotes`

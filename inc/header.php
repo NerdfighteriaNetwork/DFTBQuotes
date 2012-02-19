@@ -27,8 +27,10 @@ require_once("templatepower/class.TemplatePower.inc.php");
 
 //prepare template header
 if(file_exists("templates/".$conf['template']."/header.htm") {
+    echo "[DEVMSG] Teamplate header loaded.";
     $header = new TemplatePower("templates/".$conf['template']."/header.htm");
 }else{ //fallback on default template if the file doesn't exist.
+    echo "Warning: Template file not found. Loading default.";
     $header = new TemplatePower("templates/default/header.htm");
 $header->prepare();
 ?>
