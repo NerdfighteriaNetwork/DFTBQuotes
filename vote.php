@@ -3,7 +3,7 @@ vote.php - DFTBQuotes vote loging
 Copyright 2012, Ahren Bader-Jarvis
 Licensed under the GNU General Public License
 
-Vote.php Submits user's vote via click through link in the get parameter with the format: vote.php?[up|down]=[quote_id]
+Vote.php Submits user's vote via the post parameters: quote_id, and post element with name of either "up" or "down" depending. 
 1.0.0 Supports limiting to 1 vote via IP address, updating user's vote, keeping a running tally of votes per quote, and a simple textual display.
 
 More info: https://github.com/elad661/DFTBQuotes 
@@ -25,17 +25,18 @@ $user_ip = $_SERVER['REMOTE_ADDR']; //the end user's IP address
 $allow_post = TRUE;
 $posted=FALSE;
 
-
-//insert vote into database
-if(isset($_GET['up'])){
-	$quote_id = $_GET['up'];
-	$score_mod = 1;
-	$is_positive = TRUE;
-}
-else if(isset($_GET['down'])){
-	$quote_id = $_GET['down'];	
-	$score_mod = -1; 
-	$is_positive = FALSE;
+if(isset($_POST['quote_id'])){
+	//insert vote into database
+	$quote_id = $_POST['quote_id'];
+	
+	if(isset($_POST['up'])){
+		$score_mod = 1;
+		$is_positive = TRUE;
+	}
+	else if(isset($_POST['down'])){
+		$score_mod = -1; 
+		$is_positive = FALSE;
+	}
 }
 else{echo "Error: No quote specified."; $allow_post=FALSE;}
 
