@@ -1,7 +1,21 @@
 <?php /*
 vote.php - DFTBQuotes vote loging
-Copyright 2012, Ahren Bader-Jarvis
-Licensed under the GNU General Public License
+Copyright (C) 2012 Ahren Bader-Jarvis <djahren@djahren.com>
+
+    This file is part of DFTBQuotes.
+
+    DFTBQuotes is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Foobar is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with DFTBQuotes.  If not, see <http://www.gnu.org/licenses/>.
 
 Vote.php Submits user's vote via the post parameters: quote_id, and post element with name of either "up" or "down" depending. 
 1.0.0 Supports limiting to 1 vote via IP address, updating user's vote, keeping a running tally of votes per quote, and a simple textual display.
