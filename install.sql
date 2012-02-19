@@ -34,21 +34,6 @@ CREATE  TABLE IF NOT EXISTS `dftbquotes`.`dftbq_votes` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
--- -----------------------------------------------------
--- Table `dftbquotes`.`dftbq_totvotes`
--- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `dftbquotes`.`dftbq_totvotes` (
-  `voteID` INT(11) NOT NULL AUTO_INCREMENT ,
-  `score` INT(4) NOT NULL ,
-  `quotes_quoteID` INT NOT NULL ,
-  PRIMARY KEY (`voteID`) ,
-  INDEX `fk_dftbq_totvotes_dftbq_quotes1` (`quotes_quoteID` ASC) ,
-  CONSTRAINT `fk_totvotes_quotes`
-    FOREIGN KEY (`quotes_quoteID` )
-    REFERENCES `dftbquotes`.`dftbq_quotes` (`quoteID` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB
 
 -- -----------------------------------------------------
 -- Table `dftbquotes`.`dftbq_admins`
@@ -60,6 +45,25 @@ CREATE  TABLE IF NOT EXISTS `dftbquotes`.`dftbq_admins` (
   `salt` VARCHAR(16) NOT NULL ,
   PRIMARY KEY (`adminID`) )
 ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `dftbquotes`.`dftbq_totvotes`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `dftbquotes`.`dftbq_totvotes` (
+  `voteID` INT(11) NOT NULL AUTO_INCREMENT ,
+  `score` INT(4) NOT NULL ,
+  `quotes_quoteID` INT NOT NULL ,
+  PRIMARY KEY (`voteID`) ,
+  INDEX `fk_dftbq_totvotes_dftbq_quotes1` (`quotes_quoteID` ASC) ,
+  CONSTRAINT `fk_dftbq_totvotes_dftbq_quotes1`
+    FOREIGN KEY (`quotes_quoteID` )
+    REFERENCES `dftbquotes`.`dftbq_quotes` (`quoteID` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+AUTO_INCREMENT = 1
+DEFAULT CHARACTER SET = latin1;
 
 
 
