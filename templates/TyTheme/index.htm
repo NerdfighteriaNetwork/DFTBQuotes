@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <!--
-    "Default" - DFTBQuotes template
+    "TyTheme" - DFTBQuotes template
     Copyright (C) 2012, Dimitri Molenaars (tyrope.nl) <tyrope@tyrope.nl>
 
     This file is part of DFTBQuotes.
@@ -52,11 +52,14 @@
 			<fieldset>
 			    <legend class="quoteTitle">
 				{quoteTitle}
-				<input type="image" src="img/upVote.png" name="type" alt="(+)" />
-				<input type="image" src="img/downVote.png" name="type" alt="(-)" />
 			    </legend>
 			    <p class="quote">
 				{quoteContent}
+				<hr class="quoteLine" />
+				{quoteTime} - 
+				{upvotes} <input type="image" src="img/upVote.png" name="up" alt="(+)" />
+				{downvotes} <input type="image" src="img/downVote.png" name="down" alt="(-)" />
+				{score}
 			    </p>
 			</fieldset>
 		    </form>
