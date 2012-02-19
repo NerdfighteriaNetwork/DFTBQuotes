@@ -23,9 +23,12 @@ More info: https://github.com/elad661/DFTBQuotes
  */
 
 //load TemplatePower
-require_once("../templatepower/class.TemplatePower.inc.php");
+require_once("templatepower/class.TemplatePower.inc.php");
 
 //prepare template header
-$header = new TemplatePower("../templates/".$conf['template']."/header.htm")
+if(file_exists("templates/".$conf['template']."/header.htm") {
+    $header = new TemplatePower("templates/".$conf['template']."/header.htm");
+}else{ //fallback on default template if the file doesn't exist.
+    $header = new TemplatePower("templates/default/header.htm");
 $header->prepare();
 ?>

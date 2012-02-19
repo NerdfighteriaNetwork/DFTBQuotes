@@ -26,7 +26,7 @@ require_once("inc/header.php");
 require_once("inc/menu.php");
 
 //This part will actually get the proper file from the database/an array.
-$content = new TemplatePower("/templates/".$conf['template']."/quotes.htm");
+$content = new TemplatePower("templates/".$conf['template']."/quotes.htm");
 $content->prepare();
 
 require_once("inc/footer.php");
