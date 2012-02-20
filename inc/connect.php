@@ -24,9 +24,9 @@ More info: https://github.com/elad661/DFTBQuotes
 
 $link = mysql_connect($conf['sql_server'], $conf['sql_user'], $conf['sql_pass']);
 if (!$link) {
-    die('Could not connect: ' . mysql_error()); }
+    die('Could not connect: ' . mysql_error());
+}
 if (!mysql_select_db($conf['sql_db'], $link)) {
-    echo 'Could not select database';
-    exit;
+    die('Could not select database');
 }
 ?>

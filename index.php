@@ -22,13 +22,13 @@ index.php loads in the active template, and decides which pages should be displa
 More info: https://github.com/elad661/DFTBQuotes 
 */
 
-require_once("inc/header.php");
-require_once("inc/menu.php");
+require_once('inc/header.php');
+require_once('inc/menu.php');
 
 //This part will actually get the proper file from the database/an array.
-$content = new TemplatePower("templates/".$conf['template']."/quotes.htm");
+$content = new TemplatePower('themes/'.$conf['theme'].'/quotes.htm');
 $content->prepare();
 
-require_once("inc/footer.php");
+require_once('inc/footer.php');
 
 ?>
