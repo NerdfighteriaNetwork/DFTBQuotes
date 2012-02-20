@@ -31,7 +31,8 @@ if(file_exists('themes/'.$conf['theme'].'/footer.htm')){
 $footer->prepare();
 
 $header->printToScreen();
-$menu->printToScreen();
+$nav->printToScreen();
 $content->printToScreen();
 $footer->printToScreen();
 ?>
+
