@@ -28,7 +28,7 @@ require_once('config.php');
 require_once('templatepower/class.TemplatePower.inc.php');
 
 //prepare template header
-if(file_exists('templates/'.$conf['theme'].'/header.htm')) {
+if(file_exists('themes/'.$conf['theme'].'/header.htm')) {
     $header = new TemplatePower('themes/'.$conf['theme'].'/header.htm');
 }else{ //fallback on default template if the file doesn't exist.
     $header = new TemplatePower('themes/default/header.htm');

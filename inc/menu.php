@@ -23,7 +23,7 @@ More info: https://github.com/elad661/DFTBQuotes
  */
 
 //prepare template navigation bar
-if(file_exists('templates/'.$conf['theme'].'/menu.htm')){
+if(file_exists('themes/'.$conf['theme'].'/menu.htm')){
     $nav = new TemplatePower('themes/'.$conf['theme'].'/menu.htm');
 }else{ //fallback on default template if the file doesn't exist.
     $nav = new TemplatePower('themes/TyTheme/menu.htm');

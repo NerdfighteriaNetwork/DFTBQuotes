@@ -26,7 +26,11 @@ require_once('inc/header.php');
 require_once('inc/menu.php');
 
 //This part will actually get the proper file from the database/an array.
-$content = new TemplatePower('themes/'.$conf['theme'].'/quotes.htm');
+if(file_exists('themes'.$conf['theme'].'/quotes.htm')){
+    $content = new TemplatePower('themes/'.$conf['theme'].'/quotes.htm');
+}else{
+    $content = new TemplatePower('themes/default/quotes.htm');
+}    
 $content->prepare();
 
 require_once('inc/footer.php');

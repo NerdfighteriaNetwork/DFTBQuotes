@@ -23,7 +23,7 @@ More info: https://github.com/elad661/DFTBQuotes
  */
 
 //prepare template navigation bar
-if(file_exists('templates/'.$conf['theme'].'/footer.htm')){
+if(file_exists('themes/'.$conf['theme'].'/footer.htm')){
     $footer = new TemplatePower('themes/'.$conf['theme'].'/footer.htm');
 }else{ //fallback on default template if the file doesn't exist.
     $footer = new TemplatePower('themes/default/footer.htm');
