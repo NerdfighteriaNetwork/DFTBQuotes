@@ -1,0 +1,129 @@
+/*
+    "TyTheme" - DFTBQuotes template
+    Copyright (C) 2012, Dimitri Molenaars (tyrope.nl) <tyrope@tyrope.nl>
+			Elad Alfassa <elad@fedoraproject.org>
+
+    This file is part of DFTBQuotes.
+
+    DFTBQuotes is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Foobar is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with DFTBQuotes.  If not, see <http://www.gnu.org/licenses/>.
+
+    More info:
+    https://github.com/elad661/DFTBQuotes
+*/
+
+/* Elements */
+
+a, a:visited {
+    color: #C936D3;
+}
+
+a:active, a:hover {
+    background-color: #9C02A7;
+    color: #CB60D3;
+}
+
+body {
+    background-color: #EEEEEE;
+    color: #555555;
+    font-family: 'MS Serif', 'New York', sans-serif;
+}
+
+div {
+    margin: 10px;
+    padding: 10px;
+}
+
+h1 {
+    color: #9C02A7;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+h2 {
+    color: #9C02A7;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* Classes */
+
+.column {
+    margin-bottom: -32767px;
+    padding-bottom: 32767px;
+}
+
+.menu {
+    list-style: none;
+    padding-left: 0;
+}
+
+.quote {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.quoteFooter {
+    border-top: 1px dashed white;
+    font-family: 'MS Sans Serif', Geneva, sans-serif;
+    font-size: 80%;
+}
+
+.quoteTitle { 
+    color: #9C02A7;
+    font-family: 'MS Sans Serif', Geneva, sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.wrapper {
+    background-color: white;
+    margin: 0 auto;
+    width: 960px;
+    border-radius: 4px;
+}
+
+
+
+/* IDs */
+
+#columnWrapper {
+    margin: 0;
+    overflow:hidden;
+    padding: 0;
+}
+
+#content {
+    float:right;
+    width: 728px;
+}
+
+#header {
+    text-align: center;
+    width: 970px;
+    margin: -5px;
+    padding: 0px;
+    background: #93cede; /* Old browsers */
+    background: -moz-linear-gradient(top, #93cede 0%, #75bdd1 41%, #49a5bf 100%); /* FF3.6+ */
+    background: -webkit-linear-gradient(top, #93cede 0%,#75bdd1 41%,#49a5bf 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #93cede 0%,#75bdd1 41%,#49a5bf 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #93cede 0%,#75bdd1 41%,#49a5bf 100%); /* IE10+ */
+    background: linear-gradient(top, #93cede 0%,#75bdd1 41%,#49a5bf 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf',GradientType=0 ); /* IE6-9 */
+    border-radius: 4px 4px 0 0;
+    border-bottom: 1px solid #49a5bf;
+    display: inline-block;
+}
+
+#nav {
+    float:left;
+    width:152px;
+}
