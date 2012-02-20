@@ -23,12 +23,12 @@ More info: https://github.com/elad661/DFTBQuotes
  */
 
 //prepare template navigation bar
-if(file_exists("templates/".$conf['template']."/menu.htm"){
+if(file_exists("templates/".$conf['theme']."/menu.htm")){
     echo "[DEVMSG] Teamplate menu loaded.";
-    $nav = new TemplatePower("templates/".$conf['template']."/menu.htm");
+    $nav = new TemplatePower("templates/".$conf['theme']."/menu.htm");
 }else{ //fallback on default template if the file doesn't exist.
     echo "Warning: Template file not found. Loading default.";
-    $nav = new TemplatePower("templates/default/menu.htm");
+    $nav = new TemplatePower("templates/TyTheme/menu.htm");
 }
 $nav->prepare();
 ?>

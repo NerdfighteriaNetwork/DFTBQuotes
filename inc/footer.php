@@ -23,9 +23,9 @@ More info: https://github.com/elad661/DFTBQuotes
  */
 
 //prepare template navigation bar
-if(file_exists("templates/".$conf['template']."/footer.htm"){
+if(file_exists("templates/".$conf['theme']."/footer.htm")){
     echo "[DEVMSG] Teamplate footer loaded.";
-    $footer = new TemplatePower("templates/".$conf['template']."/footer.htm");
+    $footer = new TemplatePower("templates/".$conf['theme']."/footer.htm");
 }else{ //fallback on default template if the file doesn't exist.
     echo "Warning: Template file not found. Loading default.";
     $footer = new TemplatePower("templates/default/footer.htm");
