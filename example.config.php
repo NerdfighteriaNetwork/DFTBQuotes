@@ -34,6 +34,7 @@ $conf['theme'] = 'default'; //Active theme
 $conf['captcha_enable'] = True; //Enable reCAPTCHA
 $conf['captcha_pubkey'] = '0000000000000000000000000000000000000000'; //reCAPTCHA Public Key (Generate At http://dft.ba/-createcapt)
 $conf['captcha_prikey'] = '0000000000000000000000000000000000000000'; //reCAPTCHA Private Key (Generate At http://dft.ba/-createcapt)
+$conf['debug'] = True; //Boom Shaka Laka (Don't put this on true in production enviroments.)
 
 ?>
 
