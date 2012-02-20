@@ -31,10 +31,10 @@ $conf['sql_pass'] = ''; //MySQL password
 $conf['sql_db'] = 'dftbquotes'; //MySQL database
 $conf['sql_tbl_prefix'] = 'dftbq_'; //Prefixes to add to the table names.
 $conf['theme'] = 'default'; //Active theme
-$conf['captcha_enable'] = True; //Enable reCAPTCHA
+$conf['captcha_enable'] = TRUE; //Enable reCAPTCHA
 $conf['captcha_pubkey'] = '0000000000000000000000000000000000000000'; //reCAPTCHA Public Key (Generate At http://dft.ba/-createcapt)
 $conf['captcha_prikey'] = '0000000000000000000000000000000000000000'; //reCAPTCHA Private Key (Generate At http://dft.ba/-createcapt)
-$conf['debug'] = True; //Boom Shaka Laka (Don't put this on true in production enviroments.)
+$conf['debug'] = TRUE; //Boom Shaka Laka (Don't put this on true in production enviroments.)
 
 ?>
 
