@@ -71,7 +71,20 @@ AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = latin1;
 
 
+-- -----------------------------------------------------
+-- Table `dftbquotes`.`dftbq_pages`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `dftbquotes`.`dftbq_pages` (
+  `pageID` INT NOT NULL ,
+  `page` VARCHAR(45) NOT NULL ,
+  `folder` VARCHAR(45) NOT NULL ,
+  `auth` INT NOT NULL ,
+  PRIMARY KEY (`pageID`) )
+ENGINE = InnoDB;
+
+
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+

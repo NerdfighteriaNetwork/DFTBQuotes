@@ -24,17 +24,24 @@ This file holds all the configurations needed for proper running of DFTBQuotes
 More info: https://github.com/elad661/DFTBQuotes
 */
 
-//MySQL stuff
+//MySQL
 $conf['sql_server'] = 'localhost'; //MySQL server to connect to. (In most cases this is 'localhost')
 $conf['sql_user'] = ''; //MySQL username
 $conf['sql_pass'] = ''; //MySQL password
 $conf['sql_db'] = 'dftbquotes'; //MySQL database
 $conf['sql_tbl_prefix'] = 'dftbq_'; //Prefixes to add to the table names.
-$conf['theme'] = 'default'; //Active theme
+
+//Active Theme
+$conf['theme'] = 'default';
+
+// Captcha
 $conf['captcha_enable'] = TRUE; //Enable reCAPTCHA
 $conf['captcha_pubkey'] = '0000000000000000000000000000000000000000'; //reCAPTCHA Public Key (Generate At http://dft.ba/-createcapt)
 $conf['captcha_prikey'] = '0000000000000000000000000000000000000000'; //reCAPTCHA Private Key (Generate At http://dft.ba/-createcapt)
-$conf['debug'] = TRUE; //Boom Shaka Laka (Don't put this on true in production enviroments.)
+
+// development config values
+// Do NOT modify those unless you're sure what you're doing.
+$conf['debug'] = FALSE; //Master debug switch
 
 ?>
 
