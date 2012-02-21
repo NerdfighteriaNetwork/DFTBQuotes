@@ -1,0 +1,68 @@
+<!--
+    "WireBoot" - DFTBQuotes template
+    Copyright (C) 2012, Jason Spriggs (jasonspriggs.com) <jason@jasonspriggs.com>
+
+    This file is part of DFTBQuotes.
+
+    DFTBQuotes is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    DFTBQuotes is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with DFTBQuotes.  If not, see <http://www.gnu.org/licenses/>.
+
+    More info:
+    https://github.com/elad661/DFTBQuotes
+-->
+<div class="container">
+	<div class="row">
+		<h2>{page}</h2>
+	</div>
+	<div class="row">
+		<form action="vote.php" method="post">
+			<fieldset>
+			    <input type="hidden" name="quote_id" value="{quoteID}" />
+			    <legend class="quoteTitle">
+				{quoteTitle}
+			    </legend>
+			    <p class="quote">
+				{quoteContent}
+			    </p>
+			    <span class="quoteFooter">
+				{quoteTime} - 
+				{upvotes} <input type="image" src="img/upVote.png" name="up" alt="(+)" />
+				{downvotes} <input type="image" src="img/downVote.png" name="down" alt="(-)" />
+				{score}
+				</span>
+			</fieldset>
+		</form>
+	</div>
+</div>
+		<div class="column" id="content">
+		    <h2>{page}</h2>
+		    <!-- START BLOCK : QUOTE -->
+		    <form action="vote.php" method="post">
+			<fieldset>
+			    <input type="hidden" name="quote_id" value="{quoteID}" />
+			    <legend class="quoteTitle">
+				{quoteTitle}
+			    </legend>
+			    <p class="quote">
+				{quoteContent}
+			    </p>
+			    <span class="quoteFooter">
+				{quoteTime} - 
+				{upvotes} <input type="image" src="img/upVote.png" name="up" alt="(+)" />
+				{downvotes} <input type="image" src="img/downVote.png" name="down" alt="(-)" />
+				{score}
+			    </span>
+			</fieldset>
+		    </form>
+		    <!-- END BLOCK : QUOTE -->
+		</div>
