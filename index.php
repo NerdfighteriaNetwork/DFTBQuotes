@@ -78,7 +78,7 @@ if(isset($_GET['pid'])){
 }
 
 // Should an error be displayed?
-if($ERR_ID){
+if(isset($ERR_ID)){
     $content->newBlock("ERROR_".$ERR_ID);
     $content->assign("PID",$_GET['pid']);
     $content->prepare();
