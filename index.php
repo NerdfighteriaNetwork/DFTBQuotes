@@ -26,7 +26,6 @@ More info: https://github.com/elad661/DFTBQuotes
 /* Error codes:
  0 No error.
  1 Invalid Page ID.
- 2 Authorization required.
 */
 
 require_once('inc/header.php');
@@ -42,28 +41,37 @@ if(isset($_GET['pid'])){
 	$result = mysql_query("SELECT page, folder, auth FROM ".$conf['sql_tbl_prefix']."pages WHERE pageID='".$_GET['pid']."' LIMIT 1");
 	if(mysql_num_rows($result) > 0){
 	    $data = mysql_fetch_assoc($result);
+	    $fileName = $data['folder'].$data['page'];
 	    if($data['auth']){
 		//authorization required.
 		if(!isset($_SESSION['loggedIn'])){
 		    //not logged in.
-		    $ERR_ID = 2;
+		    if(file_exists('themes/'.$conf['theme'].'/accessDenied.htm')){
+			$content = new TemplatePower('themes/'.$conf['theme'].'/accessDenied.htm');
+		    }else{
+			$content = new TemplatePower('themes/default/accessDenied.htm');
+		    }
 		}elseif($_SESSION['loggedIn'] < $data['auth']){
 		    //account not enough access.
-		    $ERR_ID = 2;
+		    if(file_exists('themes/'.$conf['theme'].'/accessDenied.htm')){
+			$content = new TemplatePower('themes/'.$conf['theme'].'/accessDenied.htm');
+		    }else{
+			$content = new TemplatePower('themes/default/accessDenied.htm');
+		    }
 		}else{
 		    //authorization accepted.
-		    if(file_exists('themes/'.$conf['theme'].'/quotes.htm')){
-			$content = new TemplatePower('themes/'.$conf['theme'].$data['folder'].'/'.$data['page']);
+		    if(file_exists('themes/'.$conf['theme'].'/'.$fileName)){
+			$content = new TemplatePower('themes/'.$conf['theme'].'/'.$fileName);
 		    }else{
-			$content = new TemplatePower('themes/default/'.$data['folder'].$data['page']);
+			$content = new TemplatePower('themes/default/'.$fileName);
 		    }
 		}
 	    }else{
 		//no authorization needed.
-		if(file_exists('themes/'.$conf['theme'].'/quotes.htm')){
-		    $content = new TemplatePower('themes/'.$conf['theme'].$data['folder'].'/'.$data['page']);
+		if(file_exists('themes/'.$conf['theme'].'/'.$fileName)){
+		    $content = new TemplatePower('themes/'.$conf['theme'].'/'.$fileName);
 		}else{
-		    $content = new TemplatePower('themes/default/'.$data['folder'].$data['page']);
+		    $content = new TemplatePower('themes/default/'.$fileName);
 		}
 	    }
 	}

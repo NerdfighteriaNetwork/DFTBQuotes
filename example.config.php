@@ -43,5 +43,8 @@ $conf['captcha_prikey'] = '0000000000000000000000000000000000000000'; //reCAPTCH
 // Do NOT modify those unless you're sure what you're doing.
 $conf['debug'] = FALSE; //Master debug switch
 
+
+//comment or delete the line below to enable DFTBQuotes
+die("Configuration not completed. Did you read the configuration file carefully and completely?");
 ?>
 

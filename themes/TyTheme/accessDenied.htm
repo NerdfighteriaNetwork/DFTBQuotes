@@ -21,32 +21,10 @@
     https://github.com/elad661/DFTBQuotes
 -->
 		<div class="column" id="content">
-		    <!-- START BLOCK : ERROR_1 -->
 		    <div class="error">
-			<h2>invalid Page ID</h2>
-			<p>The page ID number you provided was invalid.</p>
+			<h2>Authorization required.</h2>
+			<p>This page requires you to be logged in.</p>
 			<p>Requested page ID: {PID}</p>
 		    </div>
-		    <!-- END BLOCK: ERROR_1 -->
-		    <h2>{page}</h2>
-		    <!-- START BLOCK : QUOTE -->
-		    <form action="vote.php" method="post">
-			<fieldset>
-			    <input type="hidden" name="quote_id" value="{quoteID}" />
-			    <legend class="quoteTitle">
-				{quoteTitle}
-			    </legend>
-			    <p class="quote">
-				{quoteContent}
-			    </p>
-			    <span class="quoteFooter">
-				#{quoteID} - 
-				{quoteTime} - 
-				{upvotes} <input type="image" src="img/upVote.png" name="up" alt="(+)" />
-				{downvotes} <input type="image" src="img/downVote.png" name="down" alt="(-)" />
-				{score}
-			    </span>
-			</fieldset>
-		    </form>
-		    <!-- END BLOCK : QUOTE -->
+		    <!-- Login form goes here -->
 		</div>
