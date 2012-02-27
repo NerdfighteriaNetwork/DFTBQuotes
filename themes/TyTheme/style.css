@@ -61,6 +61,12 @@ h2 {
     padding-bottom: 32767px;
 }
 
+.error {
+    border: 1px solid #F00;
+    width: 626px;
+    margin: 10 auto;
+}
+
 .menu {
     list-style: none;
     padding-left: 0;
