@@ -82,12 +82,11 @@ if(isset($_GET['pid'])){
 }
 
 // Should an error be displayed?
+$content->prepare();
 if(isset($ERR_ID)){
     $content->newBlock("ERROR_".$ERR_ID);
     $content->assign("PID",$_GET['pid']);
-    $content->prepare();
 }
-$content->prepare();
 
 require_once('inc/footer.php');
 mysql_close($link);
