@@ -72,7 +72,6 @@ if(isset($_GET['pid'])){
 	    }
 	}
     }
-}
 }else{
     // Load default page
     if(file_exists('themes/'.$conf['theme'].'/quotes.htm')){
