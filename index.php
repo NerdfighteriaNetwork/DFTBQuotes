@@ -34,48 +34,45 @@ require_once('inc/connect.php');
 
 if(isset($_GET['pid'])){
     //Load page ID, check if page is valid.
-    if(!is_int($_GET['pid'])){
-	$ERR_ID = 1;
-    }else{
-	//ask database if page exists
-	$result = mysql_query("SELECT page, folder, auth FROM ".$conf['sql_tbl_prefix']."pages WHERE pageID='".$_GET['pid']."' LIMIT 1");
-	if(mysql_num_rows($result) > 0){
-	    $data = mysql_fetch_assoc($result);
-	    $fileName = $data['folder'].$data['page'];
-	    if($data['auth']){
-		//authorization required.
-		if(!isset($_SESSION['loggedIn'])){
-		    //not logged in.
-		    if(file_exists('themes/'.$conf['theme'].'/accessDenied.htm')){
-			$content = new TemplatePower('themes/'.$conf['theme'].'/accessDenied.htm');
-		    }else{
-			$content = new TemplatePower('themes/default/accessDenied.htm');
-		    }
-		}elseif($_SESSION['loggedIn'] < $data['auth']){
-		    //account not enough access.
-		    if(file_exists('themes/'.$conf['theme'].'/accessDenied.htm')){
-			$content = new TemplatePower('themes/'.$conf['theme'].'/accessDenied.htm');
-		    }else{
-			$content = new TemplatePower('themes/default/accessDenied.htm');
-		    }
+    //ask database if page exists
+    $result = mysql_query("SELECT page, folder, auth FROM ".$conf['sql_tbl_prefix']."pages WHERE pageID='".$_GET['pid']."' LIMIT 1");
+    if(mysql_num_rows($result) > 0){
+        $data = mysql_fetch_assoc($result);
+        $fileName = $data['folder'].$data['page'];
+        if($data['auth']){
+	    //authorization required.
+	    if(!isset($_SESSION['loggedIn'])){
+		//not logged in.
+		if(file_exists('themes/'.$conf['theme'].'/accessDenied.htm')){
+		  $content = new TemplatePower('themes/'.$conf['theme'].'/accessDenied.htm');
 		}else{
-		    //authorization accepted.
-		    if(file_exists('themes/'.$conf['theme'].'/'.$fileName)){
-			$content = new TemplatePower('themes/'.$conf['theme'].'/'.$fileName);
-		    }else{
-			$content = new TemplatePower('themes/default/'.$fileName);
-		    }
+		    $content = new TemplatePower('themes/default/accessDenied.htm');
+		}
+	    }elseif($_SESSION['loggedIn'] < $data['auth']){
+		//account not enough access.
+		if(file_exists('themes/'.$conf['theme'].'/accessDenied.htm')){
+		    $content = new TemplatePower('themes/'.$conf['theme'].'/accessDenied.htm');
+		}else{
+		    $content = new TemplatePower('themes/default/accessDenied.htm');
 		}
 	    }else{
-		//no authorization needed.
+		//authorization accepted.
 		if(file_exists('themes/'.$conf['theme'].'/'.$fileName)){
 		    $content = new TemplatePower('themes/'.$conf['theme'].'/'.$fileName);
 		}else{
 		    $content = new TemplatePower('themes/default/'.$fileName);
 		}
 	    }
+	}else{
+	    //no authorization needed.
+	    if(file_exists('themes/'.$conf['theme'].'/'.$fileName)){
+	        $content = new TemplatePower('themes/'.$conf['theme'].'/'.$fileName);
+	    }else{
+		$content = new TemplatePower('themes/default/'.$fileName);
+	    }
 	}
     }
+}
 }else{
     // Load default page
     if(file_exists('themes/'.$conf['theme'].'/quotes.htm')){
