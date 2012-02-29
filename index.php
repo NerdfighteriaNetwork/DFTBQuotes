@@ -44,7 +44,7 @@ if(isset($_GET['pid'])){
 	    if(!isset($_SESSION['loggedIn'])){
 		//not logged in.
 		if(file_exists('themes/'.$conf['theme'].'/accessDenied.htm')){
-		  $content = new TemplatePower('themes/'.$conf['theme'].'/accessDenied.htm');
+		    $content = new TemplatePower('themes/'.$conf['theme'].'/accessDenied.htm');
 		}else{
 		    $content = new TemplatePower('themes/default/accessDenied.htm');
 		}
@@ -70,6 +70,13 @@ if(isset($_GET['pid'])){
 	    }else{
 		$content = new TemplatePower('themes/default/'.$fileName);
 	    }
+	}
+    }else{
+	//invalid page ID
+	if(file_exists('themes/'.$conf['theme'].'/accessDenied.htm')){
+	    $content = new TemplatePower('themes/'.$conf['theme'].'/404.htm');
+	}else{
+	    $content = new TemplatePower('themes/default/404.htm');
 	}
     }
 }else{
