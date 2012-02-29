@@ -33,7 +33,7 @@ if(isset($_GET['pid'])){
     $result = mysql_query("SELECT page, folder, auth FROM ".$conf['sql_tbl_prefix']."pages WHERE pageID='".$_GET['pid']."' LIMIT 1");
     if(mysql_num_rows($result) > 0){
         $data = mysql_fetch_assoc($result);
-        $fileName = $data['folder'].$data['page'];
+        $filename = $data['folder'].$data['page'];
         if($data['auth'] > 0){
 	    //authorization required.
 	    if(!isset($_SESSION['loggedIn'])){
