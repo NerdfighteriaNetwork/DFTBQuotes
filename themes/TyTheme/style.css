@@ -94,6 +94,7 @@ h2 {
 
 #columnWrapper {
     margin: 0;
+    overflow: hidden;
     padding: 0;
 }
 
