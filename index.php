@@ -1,5 +1,5 @@
 <?php /*
-index.php - DFTBQuotes template/page loader
+index.php - DFTBQuotes theme/page loader
 Copyright (C) 2012 Dimitri Molenaars (tyrope.nl) <tyrope@tyrope.nl>
 
     This file is part of DFTBQuotes.
@@ -23,12 +23,6 @@ it also handles any errors that should be displayed, should they be displayed.
 More info: https://github.com/elad661/DFTBQuotes 
  */
 
-/* Error codes:
- 0 No error.
- 1 Invalid Page ID.
- 2 Authentication required.
-*/
-
 require_once('inc/header.php');
 require_once('inc/menu.php');
 require_once('inc/connect.php');
@@ -45,42 +39,24 @@ if(isset($_GET['pid'])){
 	    if(!isset($_SESSION['loggedIn'])){
 		//not logged in.
 		$ERR_ID = 2;
-		if(file_exists('themes/'.$conf['theme'].'/errors.htm')){
-		    $content = new TemplatePower('themes/'.$conf['theme'].'/errors.htm');
-		}else{
-		    $content = new TemplatePower('themes/default/errors.htm');
-		}
+		require_once('error.php');
 	    }elseif($_SESSION['loggedIn'] < $data['auth']){
 		//account not enough access.
 		$ERR_ID = 3;
-		if(file_exists('themes/'.$conf['theme'].'/errors.htm')){
-		    $content = new TemplatePower('themes/'.$conf['theme'].'/errors.htm');
-		}else{
-		    $content = new TemplatePower('themes/default/errors.htm');
-		}
-	    }else{
-		//authorization accepted.
-		if(file_exists('themes/'.$conf['theme'].'/'.$fileName)){
-		    $content = new TemplatePower('themes/'.$conf['theme'].'/'.$fileName);
-		}else{
-		    $content = new TemplatePower('themes/default/'.$fileName);
-		}
-	    }
-	}else{
-	    //no authorization needed.
-	    if(file_exists('themes/'.$conf['theme'].'/'.$fileName)){
-	        $content = new TemplatePower('themes/'.$conf['theme'].'/'.$fileName);
-	    }else{
-		$content = new TemplatePower('themes/default/'.$fileName);
+		require_once('error.php');
 	    }
 	}
     }else{
 	//invalid page ID
 	$ERR_ID = 1;
-	if(file_exists('themes/'.$conf['theme'].'/errors.htm')){
-	    $content = new TemplatePower('themes/'.$conf['theme'].'/errors.htm');
+	require_once('error.php')
+    }
+    if(!$ERR_ID){
+	// No errors detected, load in requested page.
+	if(file_exists('themes/'.$conf['theme'].'/'.$fileName)){
+	    $content = new TemplatePower('themes/'.$conf['theme'].'/'.$fileName);
 	}else{
-	    $content = new TemplatePower('themes/default/errors.htm');
+	    $content = new TemplatePower('themes/default/'.$fileName);
 	}
     }
 }else{
@@ -92,13 +68,6 @@ if(isset($_GET['pid'])){
     }
 }
 
-// Should an error be displayed?
-$content->prepare();
-if(isset($ERR_ID)){
-    $content->newBlock("ERROR_".$ERR_ID);
-    $content->assign("PID",$_GET['pid']);
-}
-
-require_once('inc/footer.php');
 mysql_close($link);
+require_once('inc/footer.php');
 ?>

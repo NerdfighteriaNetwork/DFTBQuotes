@@ -21,19 +21,34 @@
     https://github.com/elad661/DFTBQuotes
 -->
 		<div class="column" id="content">
-		<!-- START BLOCK : ERROR_1 -->
+		<!-- START BLOCK : ERROR_400 -->
 		    <div class="error">
-			<h2>Invalid Page ID.</h2>
-			<p>The page ID number you provided was invalid.</p>
+			<h2>Uh-oh, something went wrong!</h2>
+			<p>An unknown error occured. Please let the developers know exactly what you did using the link below:</p>
+			<p><a href="https://github.com/elad661/DFTBQuotes/issues/new">Submit an Issue</a> (requires a <a href="https://github.com/signup/free">github account</a>)</p>
 			<p>Requested page ID: {PID}</p>
 		    </div>
-		<!-- END BLOCK : ERROR_1 -->
-		<!-- START BLOCK : ERROR_2 -->
+		<!-- END BLOCK : ERROR_400 -->
+		<!-- START BLOCK : ERROR_401 -->
 		    <div class="error">
 			<h2>Authorization required.</h2>
 			<p>This page requires you to be logged in.</p>
 			<p>Requested page ID: {PID}</p>
 		    </div>
 		    <!-- Login form goes here -->
-		<!-- END BLOCK : ERROR_2 -->
+		<!-- END BLOCK : ERROR_401 -->
+		<!-- START BLOCK : ERROR_403 -->
+		    <div class="error">
+			<h2>Forbidden.</h2>
+			<p>You do not have permissions to view this page.</p>
+			<p>Requested page ID: {PID}</p>
+		    </div>
+		<!-- END BLOCK : ERROR_403 -->
+		<!-- START BLOCK : ERROR_404 -->
+		    <div class="error">
+			<h2>Invalid Page ID.</h2>
+			<p>The page ID number you provided was invalid.</p>
+			<p>Requested page ID: {PID}</p>
+		    </div>
+		<!-- END BLOCK : ERROR_404 -->
 		</div>
