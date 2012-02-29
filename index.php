@@ -39,21 +39,20 @@ if(isset($_GET['pid'])){
 	    if(!isset($_SESSION['loggedIn'])){
 		//not logged in.
 		$ERR_ID = 2;
-		require_once('error.php');
 	    }elseif($_SESSION['loggedIn'] < $data['auth']){
 		//account not enough access.
 		$ERR_ID = 3;
-		require_once('error.php');
 	    }
 	}
     }else{
 	//invalid page ID
 	$ERR_ID = 1;
-	require_once('error.php');
     }
-    if(!$ERR_ID){
+    if(!isset($ERR_ID)){
 	// No errors detected, load in requested page.
 	require_once($filename);
+    }else{
+	require_once('error.php');
     }
 }else{
     // Load default page
