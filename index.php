@@ -53,19 +53,11 @@ if(isset($_GET['pid'])){
     }
     if(!$ERR_ID){
 	// No errors detected, load in requested page.
-	if(file_exists('themes/'.$conf['theme'].'/'.$fileName)){
-	    $content = new TemplatePower('themes/'.$conf['theme'].'/'.$fileName);
-	}else{
-	    $content = new TemplatePower('themes/default/'.$fileName);
-	}
+	require_once($filename);
     }
 }else{
     // Load default page
-    if(file_exists('themes/'.$conf['theme'].'/quotes.htm')){
-	$content = new TemplatePower('themes/'.$conf['theme'].'/quotes.htm');
-    }else{
-	$content = new TemplatePower('themes/default/quotes.htm');
-    }
+    require_once('quotes.php');
 }
 
 mysql_close($link);

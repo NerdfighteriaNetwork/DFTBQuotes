@@ -25,4 +25,5 @@ if(file_exists('themes/'.$conf['theme'].'/quotes.htm')){
 }else{
     $content = new TemplatePower('themes/default/quotes.htm');
 }
+$content->prepare();
 ?>
