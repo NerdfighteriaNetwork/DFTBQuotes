@@ -1,0 +1,14 @@
+GUEST
+1 = quotes
+2 = search
+3 = add
+4 = login
+
+ADMIN
+5 = approve
+6 = export
+
+SUPERADMIN
+7 = add admin
+8 = edit admin
+9 = remove admin
