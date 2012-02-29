@@ -34,7 +34,7 @@ if(isset($_GET['pid'])){
     if(mysql_num_rows($result) > 0){
         $data = mysql_fetch_assoc($result);
         $fileName = $data['folder'].$data['page'];
-        if($data['auth']){
+        if($data['auth'] > 0){
 	    //authorization required.
 	    if(!isset($_SESSION['loggedIn'])){
 		//not logged in.
