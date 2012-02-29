@@ -1,5 +1,5 @@
 /*
-    "TyTheme" - DFTBQuotes template
+    "TyTheme" - DFTBQuotes theme
     Copyright (C) 2012, Dimitri Molenaars (tyrope.nl) <tyrope@tyrope.nl>
 
     This file is part of DFTBQuotes.
@@ -56,11 +56,6 @@ h2 {
 
 /* Classes */
 
-.column {
-    margin-bottom: -32767px;
-    padding-bottom: 32767px;
-}
-
 .error {
     border: 1px solid #F00;
     width: 626px;
@@ -95,13 +90,10 @@ h2 {
     width: 960px;
 }
 
-
-
 /* IDs */
 
 #columnWrapper {
     margin: 0;
-    overflow:hidden;
     padding: 0;
 }
 
