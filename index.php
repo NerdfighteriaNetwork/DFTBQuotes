@@ -49,7 +49,7 @@ if(isset($_GET['pid'])){
     }else{
 	//invalid page ID
 	$ERR_ID = 1;
-	require_once('error.php')
+	require_once('error.php');
     }
     if(!$ERR_ID){
 	// No errors detected, load in requested page.
