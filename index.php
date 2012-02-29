@@ -26,6 +26,7 @@ More info: https://github.com/elad661/DFTBQuotes
 /* Error codes:
  0 No error.
  1 Invalid Page ID.
+ 2 Authentication required.
 */
 
 require_once('inc/header.php');
@@ -43,17 +44,17 @@ if(isset($_GET['pid'])){
 	    //authorization required.
 	    if(!isset($_SESSION['loggedIn'])){
 		//not logged in.
-		if(file_exists('themes/'.$conf['theme'].'/accessDenied.htm')){
-		    $content = new TemplatePower('themes/'.$conf['theme'].'/accessDenied.htm');
+		if(file_exists('themes/'.$conf['theme'].'/errors.htm')){
+		    $content = new TemplatePower('themes/'.$conf['theme'].'/errors.htm');
 		}else{
-		    $content = new TemplatePower('themes/default/accessDenied.htm');
+		    $content = new TemplatePower('themes/default/errors.htm');
 		}
 	    }elseif($_SESSION['loggedIn'] < $data['auth']){
 		//account not enough access.
-		if(file_exists('themes/'.$conf['theme'].'/accessDenied.htm')){
-		    $content = new TemplatePower('themes/'.$conf['theme'].'/accessDenied.htm');
+		if(file_exists('themes/'.$conf['theme'].'/errors.htm')){
+		    $content = new TemplatePower('themes/'.$conf['theme'].'/errors.htm');
 		}else{
-		    $content = new TemplatePower('themes/default/accessDenied.htm');
+		    $content = new TemplatePower('themes/default/errors.htm');
 		}
 	    }else{
 		//authorization accepted.
@@ -73,10 +74,10 @@ if(isset($_GET['pid'])){
 	}
     }else{
 	//invalid page ID
-	if(file_exists('themes/'.$conf['theme'].'/accessDenied.htm')){
-	    $content = new TemplatePower('themes/'.$conf['theme'].'/404.htm');
+	if(file_exists('themes/'.$conf['theme'].'/errors.htm')){
+	    $content = new TemplatePower('themes/'.$conf['theme'].'/errors.htm');
 	}else{
-	    $content = new TemplatePower('themes/default/404.htm');
+	    $content = new TemplatePower('themes/default/errors.htm');
 	}
     }
 }else{
