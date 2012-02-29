@@ -44,6 +44,7 @@ if(isset($_GET['pid'])){
 	    //authorization required.
 	    if(!isset($_SESSION['loggedIn'])){
 		//not logged in.
+		$ERR_ID = 2;
 		if(file_exists('themes/'.$conf['theme'].'/errors.htm')){
 		    $content = new TemplatePower('themes/'.$conf['theme'].'/errors.htm');
 		}else{
@@ -51,6 +52,7 @@ if(isset($_GET['pid'])){
 		}
 	    }elseif($_SESSION['loggedIn'] < $data['auth']){
 		//account not enough access.
+		$ERR_ID = 3;
 		if(file_exists('themes/'.$conf['theme'].'/errors.htm')){
 		    $content = new TemplatePower('themes/'.$conf['theme'].'/errors.htm');
 		}else{
@@ -74,6 +76,7 @@ if(isset($_GET['pid'])){
 	}
     }else{
 	//invalid page ID
+	$ERR_ID = 1;
 	if(file_exists('themes/'.$conf['theme'].'/errors.htm')){
 	    $content = new TemplatePower('themes/'.$conf['theme'].'/errors.htm');
 	}else{
