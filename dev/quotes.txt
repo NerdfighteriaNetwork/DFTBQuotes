@@ -26,3 +26,18 @@ IRSSI
                    root's line saying he's glad) to fpaste.org? It's for the DFTBQuotes project
 
 
+QwebIRC
+
+[20:42] * Tyrope actions
+[20:43] <%Tyrope> blah blah
+[20:43] <+elad> blah blah
+
+Mibbit
+
+20:41:22	<Sacha>: Hey :)
+20:41:27	<Tyrope>: oh, mibbit and qwebirc...
+20:41:35	Tyrope needs samples of those.
+20:41:37	<elad>: As for dmesg, it just shows messages from the "kernel ring buffer". Usually device event and debug data
+20:42:21	*** Joshua|Test joined #YourPants Mibbit@P4A-9500FB54.hsd1.il.comcast.net 
+20:42:25	<Tyrope>: Sacha: could you copy-paste the lines from your 'hey' to this one, and put it on fpaste.org or pastebin.com? It's for the quote database we're making.  :)
+
