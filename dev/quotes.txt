@@ -1,0 +1,28 @@
+KVIRC (with custom timestamp)
+
+[2025.59] <~root> I'm glad I did that and if they have another show someday I will do it again
+[2026.15] <~root> also I registered the blogtv account 'Nerdfighteria_IRC' because guest chattign was disabled
+[2026.42] root doesn't remember if he already had a blogtv account
+[2027.04] <Xai> BItching. :D
+[2028.49] <%Tyrope> I have a request, can people copy-paste the last like, 5 lines (say, from root's line saying he's glad) to fpaste.org? It's for the DFTBQuotes project
+
+
+mIRC
+
+[13:26:04] <~root> I'm glad I did that and if they have another show someday I will do it again
+[13:26:20] <~root> also I registered the blogtv account 'Nerdfighteria_IRC' because guest chattign was disabled
+[13:26:47] * ~root doesn't remember if he already had a blogtv account
+[13:27:09] <Xai> BItching. :D
+[13:28:55] <%Tyrope> I have a request, can people copy-paste the last like, 5 lines (say, from root's line saying he's glad) to fpaste.org? It's for the DFTBQuotes project
+
+IRSSI
+
+13:26:04 <~root> I'm glad I did that and if they have another show someday I will do it again
+13:26:21 <~root> also I registered the blogtv account 'Nerdfighteria_IRC' because guest chattign
+                 was disabled
+13:26:47  * root doesn't remember if he already had a blogtv account
+13:27:09 <Xai> BItching. :D
+13:28:55 <%Tyrope> I have a request, can people copy-paste the last like, 5 lines (say, from
+                   root's line saying he's glad) to fpaste.org? It's for the DFTBQuotes project
+
+
