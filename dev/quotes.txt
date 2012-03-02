@@ -1,10 +1,12 @@
-KVIRC (with custom timestamp)
+KVIrc
 
-[2025.59] <~root> I'm glad I did that and if they have another show someday I will do it again
-[2026.15] <~root> also I registered the blogtv account 'Nerdfighteria_IRC' because guest chattign was disabled
-[2026.42] root doesn't remember if he already had a blogtv account
-[2027.04] <Xai> BItching. :D
-[2028.49] <%Tyrope> I have a request, can people copy-paste the last like, 5 lines (say, from root's line saying he's glad) to fpaste.org? It's for the DFTBQuotes project
+[20:25:59] <~root> I'm glad I did that and if they have another show someday I will do it again
+[20:26:15] <~root> also I registered the blogtv account 'Nerdfighteria_IRC' because guest chattign was disabled
+[20:26:42] root doesn't remember if he already had a blogtv account
+[20:27:04] <Xai> BItching. :D
+[20:28:49] <%Tyrope> I have a request, can people copy-paste the last like, 5 lines (say, from root's line saying he's glad) to fpaste.org? It's for the DFTBQuotes project
+[20:52:37] SachaTablet [androirc@C6BEAC9F.9F831813.D96B6459.IP] has quit IRC: Connection reset by peer
+[20:52:54] SachaTab [androirc@C6BEAC9F.9F831813.D96B6459.IP] has joined #YourPants
 
 
 mIRC
