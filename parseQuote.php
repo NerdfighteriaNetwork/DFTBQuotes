@@ -3,9 +3,27 @@
 function parseQuoteLine($input){
     //remove timestamp
     $input_notime = preg_replace('/^[\[\(]*\d+[:]*\d*[:]*\d*[\]\)]*( |\t)*/', '', $input);
-    $parsed = $input_notime;
 
-    return $parsed; //for now
+    //is this a join, part or quit?
+    preg_match('(join|left|quit)', $input_notime, $matches);
+
+    switch($matches){
+	case 'join':
+	    $parsed = 'JOIN'+"\n"+$input_notime; //temp
+	    break;
+	case 'left':
+	    $parsed = 'PART'+"\n"+$input_notime; //temp
+	    break;
+	case 'quit':
+	    $parsed = 'QUIT'+"\n"+$input_notime; //temp
+	    break;
+	default:
+	    $parsed = 'MSG/ACTION'+"\n"+$input_notime; //temp
+	    break;
+	//end switch
+    }
+
+    return $parsed;
 }
 
 function parseQuote($input){
