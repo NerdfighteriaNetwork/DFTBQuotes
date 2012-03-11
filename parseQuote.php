@@ -1,7 +1,11 @@
 <?php
 
 function parseQuoteLine($input){
-    return $input; //for now
+    //remove timestamp
+    $input_notime = preg_replace("^[\[]*\d+[:]*\d*[:]*\d*[\]]*", '', $input);
+    $parsed = $input_notime;
+
+    return $parsed; //for now
 }
 
 function parseQuote($input){
