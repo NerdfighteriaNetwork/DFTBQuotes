@@ -54,6 +54,5 @@ if($conf['debug']){
 	</fieldset>
     </form>
     <?php
-    }
 }
 ?>
