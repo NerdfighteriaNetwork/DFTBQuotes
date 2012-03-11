@@ -2,7 +2,7 @@
 
 function parseQuoteLine($input){
     //remove timestamp
-    $input_notime = preg_replace('^[\[\(]*\d+[:]*\d*[:]*\d*[\]\)]*', '', $input);
+    $input_notime = preg_replace('/^[\[\(]*\d+[:]*\d*[:]*\d*[\]\)]*/', '', $input);
     $parsed = $input_notime;
 
     return $parsed; //for now
@@ -11,13 +11,11 @@ function parseQuoteLine($input){
 function parseQuote($input){
     //split input by line.
     $raw_arr = preg_split('/$\R?^/m', $input);
-    var_dump($raw_arr);
-    foreach($raw_arr as &$line) $line = rtrim($line);
 
     //put each line into the parser
     $parsed = array();
-    foreach($text_arr as $line){
-	$parsed += parseQuoteInput($line);
+    foreach($raw_arr as $line){
+	$parsed += parseQuoteInput(rtrim($line));
     }
     $output = implode($parsed,"\n");
     return $output;
