@@ -54,8 +54,8 @@ Mibbit
 20:42:21	*** Joshua|Test joined #YourPants Mibbit@P4A-9500FB54.hsd1.il.comcast.net 
 20:41:27	<Tyrope>: oh, mibbit and qwebirc...
 20:41:35	Tyrope needs samples of those.
-PART
-QUIT
+20:09		*** TyRope2 left #dftbquotes (Bye bye!)
+20:09		*** TyRope2 quit (Quit: Read error: EOF from client)
 
 Colloquy (iPad)
 
