@@ -7,6 +7,7 @@ function parseQuoteLine($input){
     //is this a join, part or quit?
     preg_match('(join|left|quit)', $input_notime, $matches);
 
+    var_dump($matches);
     switch($matches){
 	case 'join':
 	    $parsed = 'JOIN'."\n".$input_notime; //temp
