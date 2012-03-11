@@ -15,7 +15,7 @@ function parseQuote($input){
     //put each line into the parser
     $parsed = array();
     foreach($raw_arr as $line){
-	$parsed += parseQuoteInput(rtrim($line));
+	$parsed += parseQuoteLine(rtrim($line));
     }
     $output = implode($parsed,"\n");
     return $output;
