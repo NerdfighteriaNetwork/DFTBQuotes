@@ -9,16 +9,16 @@ function parseQuoteLine($input){
 
     switch($matches){
 	case 'join':
-	    $parsed = 'JOIN'+"\n"+$input_notime; //temp
+	    $parsed = 'JOIN'."\n".$input_notime; //temp
 	    break;
 	case 'left':
-	    $parsed = 'PART'+"\n"+$input_notime; //temp
+	    $parsed = 'PART'."\n".$input_notime; //temp
 	    break;
 	case 'quit':
-	    $parsed = 'QUIT'+"\n"+$input_notime; //temp
+	    $parsed = 'QUIT'."\n".$input_notime; //temp
 	    break;
 	default:
-	    $parsed = 'MSG/ACTION'+"\n"+$input_notime; //temp
+	    $parsed = 'MSG/ACTION'."\n".$input_notime; //temp
 	    break;
 	//end switch
     }
