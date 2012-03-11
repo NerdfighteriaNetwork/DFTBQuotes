@@ -2,7 +2,7 @@
 
 function parseQuoteLine($input){
     //remove timestamp
-    $input_notime = preg_replace(" ^[\[]*\d+[:]*\d*[:]*\d*[\]]* ", '', $input);
+    $input_notime = preg_replace('^[\[]*\d+[:]*\d*[:]*\d*[\]]*', '', $input);
     $parsed = $input_notime;
 
     return $parsed; //for now
@@ -31,13 +31,23 @@ if($conf['debug']){
 	?>
 	<form action="?" method="post">
 	    <fieldset>
-		<label for="raw">Raw input:</label>
-		<textarea name="raw">
-		    <?php echo $raw; ?>
-	        </textarea>
-		<textarea name="parsed">
-		  <?php echo $raw; ?>
-		</textarea>
+		<table>
+		    <tr>
+			<th><label for="raw">Raw input:</label></th>
+			<th><label for="parsed">Parsed Output:</label></th>
+		    </tr><tr>
+			<td>
+			    <textarea name="raw" rows="10" cols="30">
+				<?php echo $raw; ?>
+			    </textarea>
+			</td>
+			<td>
+			    <textarea name="parsed" rows="10" cols="30">
+				<?php echo $raw; ?>
+			    </textarea>
+			</td>
+		    </tr>
+		</table>
 	    </fieldset>
 	</form>
 	<?php
