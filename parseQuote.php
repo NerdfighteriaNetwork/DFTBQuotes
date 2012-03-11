@@ -22,6 +22,7 @@ function parseQuote($input){
     return $output;
 }
 
+require_once('config.php');
 if($conf['debug']){
     if(isset($_POST['text'])){
         $raw = $_POST['text'];
