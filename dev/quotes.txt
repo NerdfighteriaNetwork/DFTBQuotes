@@ -1,54 +1,67 @@
+Please paste samples in the following order:
+JOIN
+MSG
+ACTION
+PART
+QUIT
+
+
+
+Desired result:
+USERNAME joined #channel
+<USERNAME> Message
+<b>USERNAME</b> actions
+USERNAME left #channel
+USERNAME quit IRC
+
+
 KVIrc
 
-[20:25:59] <~root> I'm glad I did that and if they have another show someday I will do it again
+[20:52:54] SachaTab [androirc@C6BEAC9F.9F831813.D96B6459.IP] has joined #YourPants
 [20:26:15] <~root> also I registered the blogtv account 'Nerdfighteria_IRC' because guest chattign was disabled
 [20:26:42] root doesn't remember if he already had a blogtv account
-[20:27:04] <Xai> BItching. :D
-[20:28:49] <%Tyrope> I have a request, can people copy-paste the last like, 5 lines (say, from root's line saying he's glad) to fpaste.org? It's for the DFTBQuotes project
+[20:04:14] Tyrope2 [webchat@Tyrope.nl] has left #dftbquotes: rejoining. . .
 [20:52:37] SachaTablet [androirc@C6BEAC9F.9F831813.D96B6459.IP] has quit IRC: Connection reset by peer
-[20:52:54] SachaTab [androirc@C6BEAC9F.9F831813.D96B6459.IP] has joined #YourPants
 
 
 mIRC
 
-[13:26:04] <~root> I'm glad I did that and if they have another show someday I will do it again
+JOIN
 [13:26:20] <~root> also I registered the blogtv account 'Nerdfighteria_IRC' because guest chattign was disabled
 [13:26:47] * ~root doesn't remember if he already had a blogtv account
-[13:27:09] <Xai> BItching. :D
-[13:28:55] <%Tyrope> I have a request, can people copy-paste the last like, 5 lines (say, from root's line saying he's glad) to fpaste.org? It's for the DFTBQuotes project
+PART
+QUIT
 
 IRSSI
 
-13:26:04 <~root> I'm glad I did that and if they have another show someday I will do it again
+JOIN
 13:26:21 <~root> also I registered the blogtv account 'Nerdfighteria_IRC' because guest chattign
                  was disabled
 13:26:47  * root doesn't remember if he already had a blogtv account
-13:27:09 <Xai> BItching. :D
-13:28:55 <%Tyrope> I have a request, can people copy-paste the last like, 5 lines (say, from
-                   root's line saying he's glad) to fpaste.org? It's for the DFTBQuotes project
-
+PART
+QUIT
 
 QwebIRC
 
-[20:42] * Tyrope actions
+[20:02] == Tyrope2 [webchat@P4A-CE293CC2.cm-6-5b.dynamic.ziggo.nl] has joined #dftbquotes
 [20:43] <%Tyrope> blah blah
-[20:43] <+elad> blah blah
+[20:42] * Tyrope actions
+[20:02] == Tyrope [Tyrope@Tyrope.nl] has left #dftbquotes [Bye bye!]
+[20:05] == TyRope3 [Tyrope@Tyrope.nl] has quit [Quit: TyRope3]
 
 Mibbit
 
-20:41:22	<Sacha>: Hey :)
+20:42:21	*** Joshua|Test joined #YourPants Mibbit@P4A-9500FB54.hsd1.il.comcast.net 
 20:41:27	<Tyrope>: oh, mibbit and qwebirc...
 20:41:35	Tyrope needs samples of those.
-20:41:37	<elad>: As for dmesg, it just shows messages from the "kernel ring buffer". Usually device event and debug data
-20:42:21	*** Joshua|Test joined #YourPants Mibbit@P4A-9500FB54.hsd1.il.comcast.net 
-20:42:25	<Tyrope>: Sacha: could you copy-paste the lines from your 'hey' to this one, and put it on fpaste.org or pastebin.com? It's for the quote database we're making.  :)
+PART
+QUIT
 
 Colloquy (iPad)
 
+JOIN
 PuppySizedNinja: I'm a night person, I'm always up late :P
-Timeline: I am a night owl.
-elad: Im a noon human
-Timeline: My name is Doctor Hoo.
-Timeline: Get it because owls
-
+ACTION
+PART
+QUIT
 
