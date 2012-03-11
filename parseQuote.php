@@ -16,11 +16,10 @@ function parseQuoteLine($input){
 	    case 'quit':
 		$parsed = 'QUIT'."\n".$input_notime; //temp
 		break;
-	    default:
-		$parsed = 'MSG/ACTION'."\n".$input_notime; //temp
-		break;
 	    //end switch
 	}
+    }else{
+	$parsed = 'MSG/ACTION'."\n".$input_notime; //temp
     }
     return $parsed;
 }
