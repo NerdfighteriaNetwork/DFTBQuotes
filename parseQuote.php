@@ -5,25 +5,23 @@ function parseQuoteLine($input){
     $input_notime = preg_replace('/^[\[\(]*\d+[:]*\d*[:]*\d*[\]\)]*( |\t)*/', '', $input);
 
     //is this a join, part or quit?
-    preg_match('(join|left|quit)', $input_notime, $matches);
-
-    var_dump($matches);
-    switch($matches[0]){
-	case 'join':
-	    $parsed = 'JOIN'."\n".$input_notime; //temp
-	    break;
-	case 'left':
-	    $parsed = 'PART'."\n".$input_notime; //temp
-	    break;
-	case 'quit':
-	    $parsed = 'QUIT'."\n".$input_notime; //temp
-	    break;
-	default:
-	    $parsed = 'MSG/ACTION'."\n".$input_notime; //temp
-	    break;
-	//end switch
+    if(preg_match('(join|left|quit)', $input_notime, $matches)){
+	switch($matches[0]){
+	    case 'join':
+		$parsed = 'JOIN'."\n".$input_notime; //temp
+		break;
+	    case 'left':
+		$parsed = 'PART'."\n".$input_notime; //temp
+		break;
+	    case 'quit':
+		$parsed = 'QUIT'."\n".$input_notime; //temp
+		break;
+	    default:
+		$parsed = 'MSG/ACTION'."\n".$input_notime; //temp
+		break;
+	    //end switch
+	}
     }
-
     return $parsed;
 }
 
