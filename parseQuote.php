@@ -64,7 +64,7 @@ if($conf['debug']){
     ?>
     <form action="?" method="post">
 	<fieldset>
-	    <textarea name="text" rows="20" cols="100></textarea><br />
+	    <textarea name="text" rows="20" cols="100"></textarea><br />
 	    <input type="submit" />
 	</fieldset>
     </form>
