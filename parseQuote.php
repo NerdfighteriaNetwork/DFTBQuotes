@@ -8,7 +8,7 @@ function parseQuoteLine($input){
     $nickname = '[~&@%+]?(?:[A-z[\]{}`^_\\|][A-z0-9[\]{}`^_\\|-]{0,29})';
     $ident = '[A-z0-9\-_\.]{1,10}';
     $host = '[A-z0-9]+[:\.]+[A-z0-9]+(?:[:\.]+|[A-z0-9]+)+';
-    $channel = '#(?:[A-z0-9~!@#\$%\^&\*()_\+`\-=[{}\|\'";\./]|])*';
+    $channel = '#(?:[A-z0-9~!@#\$%\^&\*()_\+`\-=\[{}\|\'";\./<>\?]|])*';
 
     //While matching, make sure you specify if you want to catch the part first!
     // '('.$part.')' == catch
