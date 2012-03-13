@@ -4,22 +4,21 @@ function parseQuoteLine($input){
     //remove timestamp
     $input_notime = preg_replace('/^[\[\(]*\d+[:]*\d*[:]*\d*[\]\)]*( |\t)*/', '', $input);
 
-    //is this a join, part or quit?
-    if(preg_match('(join|left|quit)', $input_notime, $matches)){
-	switch($matches[0]){
-	    case 'join':
-		$parsed = 'JOIN'."\n".$input_notime; //temp
-		break;
-	    case 'left':
-		$parsed = 'PART'."\n".$input_notime; //temp
-		break;
-	    case 'quit':
-		$parsed = 'QUIT'."\n".$input_notime; //temp
-		break;
-	    //end switch
-	}
+    //what type of objects are there?
+    $nickname = '[~&@%+]?(?:[A-z[\]{}`^_\\|][A-z0-9[\]{}`^_\\|-]{0,29})';
+    $ident = '[A-z0-9\-_\.]{1,10}';
+    $host = '[A-z0-9]+[:\.]+[A-z0-9]+(?:[:\.]+|[A-z0-9]+)+';
+    $channel = '#(?:[A-z0-9~!@#\$%\^&\*()_\+`\-=[{}\|\'";\./<>\?]|])*';
+
+    //While matching, make sure you specify if you want to catch the part first!
+    // '('.$part.')' == catch
+    // '(?:'.$part.')' == don't catch
+    //join
+    if(preg_match('/(?:|* |-!- |== |*** )?('.$nickname.') (?:([|(|)(?:'.$ident.')@(?:'.$host.')(]|\)|)|) (?:has |)joined ('.$channel.')/', $input_notime, $matches) || 
+	preg_match('/(?:|*** )('.$nickname.') joined ('.$channel.') (?:'.$ident.')@(?:'.$host.')/', $input_notime, $matches)){
+	$parsed = $matches[1].' joined '.$matches[2];
     }else{
-	$parsed = 'MSG/ACTION'."\n".$input_notime; //temp
+	$parsed = $input_notime; //temp
     }
     return $parsed;
 }
@@ -65,7 +64,7 @@ if($conf['debug']){
     ?>
     <form action="?" method="post">
 	<fieldset>
-	    <textarea name="text"></textarea><br />
+	    <textarea name="text" rows="20" cols="100></textarea><br />
 	    <input type="submit" />
 	</fieldset>
     </form>
